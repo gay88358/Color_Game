@@ -1,0 +1,13 @@
+.board {
+    text-align: center;
+    color: white;
+}
+
+.board .color-picked {
+    font-weight: bold;  
+    font-size: 400%;      
+}
+
+.board .message {
+    font-size: 400%;
+}

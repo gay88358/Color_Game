@@ -1,0 +1,53 @@
+/* .navbar {
+    background-color: white;
+    font-size: 16px;
+}
+
+.navbar .brand {
+    font-weight: bold;    
+    font-size: 120%;
+}
+
+.navbar .about {
+    float: right;
+    color: gray;
+}
+.navbar .clear {
+    content: '';
+    clear: both;
+} */
+
+.navbar {
+    background: white;
+    padding: 1rem;
+    color: #484848;
+}
+
+.navbar .flex {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar .brand, .navbar .hard, .navbar .nightmare, .navbar .easy {
+    font-weight: bold;    
+    padding: 0 1rem;
+    border-radius: 999rem;
+    cursor: pointer;
+}
+
+
+.active {
+    background-color: steelblue;
+    color: white;
+}
+
+.navbar .about {
+    margin-left: auto;
+    color: #bbb;
+}
+
+.navbar .selected {
+    color: white;
+    background: steelblue;
+}
