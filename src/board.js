@@ -13,11 +13,17 @@ export default class Board extends Component {
         this.colorDisplay = this.root.querySelector('.color-picked');
         this.message = this.root.querySelector('.message');
         this.reset(color);
+        this.error = false;
     }
 
     setSecond(second) {
         this.second = second;
-        this.message.textContent = "What's the color? " + String(5 - this.second);        
+        console.log(this.error);
+        if (this.error == true) {
+            this.showErrorMessage();
+        } else {
+            this.message.textContent = "What's the color? " + String(5 - this.second);        
+        }
     }
 
     infoTimeout() {
@@ -37,7 +43,8 @@ export default class Board extends Component {
 
     showErrorMessage() {
         if (this.level == "nightmare") {
-            this.message.textContent = "Try it! " + String(5 - this.second);            
+            this.message.textContent = "Try it! " + String(5 - this.second);
+            this.error = true;            
         } else {
             this.message.textContent = "Try it!";            
         }
