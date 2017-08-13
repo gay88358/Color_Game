@@ -33,6 +33,7 @@ export default class Board extends Component {
 
     reset(color) {
         console.log(color);
+        this.error = false;
         this.colorDisplay.textContent = color.toUpperCase();
         if (this.level == "nightmare") {
             this.message.textContent = "What's the color? 5";            
