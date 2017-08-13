@@ -29,6 +29,7 @@ export default class Main extends Component {
         this.reset = new Reset(root.querySelector('.reset'));
         this.reset.on('click', this.handleResetClick.bind(this));
         this.component = [this, this.navbar, this.deck, this.board, this.reset];
+        this.blinkComponent = [this.deck, this.board];
     }
 
     handleLevelChangeCick(level) {
@@ -69,6 +70,9 @@ export default class Main extends Component {
         var s = 0;     
         this.timer = setInterval(function(thisObj) {
             s++
+            thisObj.blinkComponent.forEach(f => {
+                f.blink();
+            })
             thisObj.board.setSecond(s);
             if (s == 5) {
                 thisObj.component.forEach(f => {

@@ -26,4 +26,12 @@ export default class Component {
 
     }
 
+    blink() {
+        this.root.style.opacity = 0.85;
+        setTimeout(function(thisObj) {
+            thisObj.root.style.opacity = 1;
+        }, 100, this);
+    }
+    
+
 }

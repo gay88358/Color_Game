@@ -7,7 +7,6 @@ export default class Board extends Component {
         return '.board';
     }
 
-
     constructor(root, color) {
         super(root);
         this.level = "easy";
@@ -27,6 +26,7 @@ export default class Board extends Component {
 
 
     reset(color) {
+        console.log(color);
         this.colorDisplay.textContent = color.toUpperCase();
         if (this.level == "nightmare") {
             this.message.textContent = "What's the color? 5";            
